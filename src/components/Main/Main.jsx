@@ -1,7 +1,21 @@
 import './Main.scss';
+import { useCallback, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Card } from '../Card';
+import { getAllCardsAsync } from '../../store/cardsActionCreaters';
 
 const Main = () => {
+  const dispatch = useDispatch();
+
+  const preloadData = useCallback(async () => {
+    dispatch(getAllCardsAsync());
+  }, [dispatch])
+  
+  useEffect(() => {
+    preloadData()
+      .catch(console.error);;
+  }, [preloadData])
+
   const testCard =   
 {
   "id": 1,
