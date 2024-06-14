@@ -1,11 +1,17 @@
 import './Card.scss';
+import { useDispatch } from 'react-redux';
+import { deleteCardByIdSuccess } from '../../store/cardsActionCreaters';
 
+
+const deleteButtonHandler = (id, dispatch) => {
+  dispatch(deleteCardByIdSuccess(id));
+}
+  
 const Card = ({card}) => {
-  // const { card } = card;
-  console.log(card)
-
+  const dispatch = useDispatch();
+  
   return (
-    <div className='card'>
+    <li className='card'>
       <div className="card__header">
         <span className="card__span">id: {card.id}</span>
         <span className="card__span">Username: {card.username}</span>
@@ -37,9 +43,9 @@ const Card = ({card}) => {
       </div>
 
       <div className="card__footer">
-        <button className="card__delete">delete</button>
+        <button className="card__delete" onClick={() => {deleteButtonHandler(card.id, dispatch)}}>Delete</button>
       </div>
-    </div>
+    </li>
   )
 }
 
