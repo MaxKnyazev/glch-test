@@ -24,7 +24,7 @@ const Card = ({card}) => {
         <div className="card__wrapper">
           <span className="card__span">Street: {card.address.street}</span>
           <span className="card__span">Suite: {card.address.suite}</span>
-          <span className="card__span">City: {card.address.City}</span>
+          <span className="card__span">City: {card.address.city}</span>
           <span className="card__span">Zipcode: {card.address.zipcode}</span>
           <span className="card__span">Geo:</span>
           <div className="card__wrapper">

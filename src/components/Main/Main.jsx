@@ -17,7 +17,7 @@ const Main = () => {
   }, [preloadData])
 
   return (
-    <main>
+    <main className='main'>
       <CardsList />
     </main>
   )
