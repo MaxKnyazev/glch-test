@@ -5,7 +5,9 @@ import {
 
 const initialState = {
   cards: [],
-  isLoading: false,
+  countCards: 5,
+  isInit: true,
+  isLoading: true,
   error: null,
 }
 
