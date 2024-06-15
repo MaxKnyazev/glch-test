@@ -1,5 +1,47 @@
 @import '../../variable';
 
 .header {
-  background-color: $header-background-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh;
+  
+  &--light {
+    background-color: $header-background-color;
+  }
+  
+  &--dark {
+    background-color: black;
+  }
+
+  &__title--light {
+    color: black;
+  }
+
+  &__title--dark {
+    color: white;
+  }
+}
+
+.svg {
+  width: 4vh;
+  height: 4vh;
+  cursor: pointer;
+  margin: 0 1vh;
+}
+
+.moon {
+  fill: black;
+}
+
+.sun {
+  fill: bisque;
+}
+
+.github--light {
+  fill: black;
+}
+
+.github--dark {
+  fill: bisque;
 }

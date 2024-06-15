@@ -1,7 +1,7 @@
 import { 
   GET_ALL_CARDS_PENDING, GET_ALL_CARDS_SUCCESS, GET_ALL_CARDS_ERROR,
   DELETE_CARD_BY_ID_PENDING, DELETE_CARD_BY_ID_SUCCESS, DELETE_CARD_BY_ID_ERROR,
-  SET_COUNTER_CARDS_VALUE, SET_INIT_FALSE_VALUE
+  SET_COUNTER_CARDS_VALUE, SET_INIT_FALSE_VALUE, TOGGLE_THEME
 } from './cardsActionTypes';
 // import { axiosInstance } from '../../utils/axiosInstance';
 
@@ -82,6 +82,13 @@ export const setInitFalseValue = () => {
     payload: false,
   }
 }
+
+export const toggleTheme = () => {
+  return {
+    type: TOGGLE_THEME,
+  }
+}
+
 
 // export const deleteCardByIdAsync = () => {
 //   return async (dispatch) => {
