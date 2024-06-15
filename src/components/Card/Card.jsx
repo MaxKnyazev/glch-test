@@ -2,14 +2,13 @@ import './Card.scss';
 import { useDispatch } from 'react-redux';
 import { deleteCardByIdSuccess } from '../../store/cardsActionCreaters';
 
-
 const deleteButtonHandler = (id, dispatch) => {
   dispatch(deleteCardByIdSuccess(id));
 }
   
 const Card = ({card}) => {
   const dispatch = useDispatch();
-  
+ 
   return (
     <li className='card'>
       <div className="card__header">

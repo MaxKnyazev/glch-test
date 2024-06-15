@@ -1,6 +1,7 @@
 import { 
   GET_ALL_CARDS_PENDING, GET_ALL_CARDS_SUCCESS, GET_ALL_CARDS_ERROR,
-  DELETE_CARD_BY_ID_PENDING, DELETE_CARD_BY_ID_SUCCESS, DELETE_CARD_BY_ID_ERROR
+  DELETE_CARD_BY_ID_PENDING, DELETE_CARD_BY_ID_SUCCESS, DELETE_CARD_BY_ID_ERROR,
+  SET_COUNTER_CARDS_VALUE, SET_INIT_FALSE_VALUE
 } from './cardsActionTypes';
 // import { axiosInstance } from '../../utils/axiosInstance';
 
@@ -24,9 +25,9 @@ export const getAllCardsError = (error) => {
   }
 }
 
-export const getAllCardsAsync = () => {
+export const getAllCardsAsync = (count) => {
   const BASE_URL = 'https://jsonplaceholder.typicode.com/users';
-  let count = 5;
+  // let count = 5;
   const CLIENT_ERROR = '400+ Internal client error';
   const SERVER_ERROR = '500+ Internal server error';
 
@@ -65,6 +66,20 @@ export const deleteCardByIdError = (error) => {
   return {
     type: DELETE_CARD_BY_ID_ERROR,
     payload: error,
+  }
+}
+
+export const setCounterCardsValue = (value) => {
+  return {
+    type: SET_COUNTER_CARDS_VALUE,
+    payload: value,
+  }
+}
+
+export const setInitFalseValue = () => {
+  return {
+    type: SET_INIT_FALSE_VALUE,
+    payload: false,
   }
 }
 
