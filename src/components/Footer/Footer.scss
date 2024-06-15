@@ -2,5 +2,14 @@
 
 .footer {
   // background-color: $footer-background-color;
-  background-color: red;
+  background-color: $footer-background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+
+  &__copyright {
+    color: $footer-color;
+    font-size: 16px;
+  }
 }

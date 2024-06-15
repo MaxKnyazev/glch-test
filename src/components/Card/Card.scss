@@ -62,7 +62,9 @@
     color: $delete-color;
     background-color: $delete-background-color;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
 
     &:hover {
       color: $delete-hover-color;
