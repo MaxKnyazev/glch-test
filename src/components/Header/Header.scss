@@ -1,52 +1,51 @@
 @import '../../variable';
 
 .header {
-  background-color: $header-background-color;
-  padding: 1.5rem 10rem;
+  padding: 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 
   &--light {
-    background-color: $header-background-color;
+    background-color: $header-background-color-light;
   }
   
   &--dark {
-    background-color: black;
+    background-color: $header-background-color-dark;
   }
 
   &__title {
-    color: $header-color;
-
     &--light {
-      color: black;
+      color: $header-color-light;
     }
   
     &--dark {
-      color: white;
+      color: $header-color-dark;
     }
   }
-}
 
-.svg {
-  width: 4vh;
-  height: 4vh;
-  cursor: pointer;
-  margin: 0 1vh;
-}
+  &__svg {
+    width: 4vh;
+    height: 4vh;
+    cursor: pointer;
+    margin: 0 1vh;
+    transition: all 200ms ease-in-out;
 
-.moon {
-  fill: black;
-}
+    &--light {
+      fill: $header-color-light;
 
-.sun {
-  fill: bisque;
-}
+      &:hover {
+        fill: $header-color-hover-light;
+      }
+    }
 
-.github--light {
-  fill: black;
-}
+    &--dark {
+      fill: $header-color-dark;
 
-.github--dark {
-  fill: bisque;
+      &:hover {
+        fill: $header-color-hover-dark;
+      }
+    }
+  }
 }

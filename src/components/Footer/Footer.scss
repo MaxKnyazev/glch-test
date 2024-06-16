@@ -1,30 +1,28 @@
 @import '../../variable';
 
 .footer {
-  background-color: $footer-background-color;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
 
   &--light {
-    background-color: $header-background-color;
+    background-color: $footer-background-color-light;
   }
   
   &--dark {
-    background-color: black;
+    background-color: $footer-background-color-dark;
   }
 
   &__copyright {
-    color: $footer-color;
     font-size: 16px;
 
     &--light {
-      color: black;
+      color: $footer-color-light;
     }
   
     &--dark {
-      color: white;
+      color: $footer-color-dark;
     }
   }
 }

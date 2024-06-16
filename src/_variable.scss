@@ -1,16 +1,43 @@
-$header-background-color: #4d4843;
-$header-color: #ebebeb;
+// LIGHT THEME:
 
-$main-background-color: #f8f2eb;
-$card-background-color: #f1e8de;
-$card-color: #1d1d1d;
-$card-header-background-color: #e4b385;
-$card-header-color: #ffffff;
-$card-footer-background-color: #dbcdbe;
-$delete-background-color: #d49172;
-$delete-color: #f0f0f0;
-$delete-hover-background-color: #d46956;
-$delete-hover-color: #ffffff;
+$header-background-color-light: #4d4843;
+$header-color-light: #ebebeb;
+$header-color-hover-light: #fff;
 
-$footer-background-color: #2b2828;
-$footer-color: #dbd7d5;
+$init-background-color-focus-light: #f7e9d5;
+
+$main-background-color-light: #f8f2eb;
+$card-background-color-light: #f1e8de;
+$card-color-light: #1d1d1d;
+$card-header-background-color-light: #e4b385;
+$card-header-color-light: #ffffff;
+$card-footer-background-color-light: #dbcdbe;
+$delete-background-color-light: #d49172;
+$delete-color-light: #f0f0f0;
+$delete-hover-background-color-light: #d46956;
+$delete-hover-color-light: #ffffff;
+
+$footer-background-color-light: #2b2828;
+$footer-color-light: #dbd7d5;
+
+// DARK THEME:
+
+$header-background-color-dark: #252525;
+$header-color-dark: #dbdbdb;
+$header-color-hover-dark: #fff;
+
+$init-background-color-focus-dark: #353535;
+
+$main-background-color-dark: #383838;
+$card-background-color-dark: #2e2e2e;
+$card-color-dark: #e2e2e2;
+$card-header-background-color-dark: #272421;
+$card-header-color-dark: #ffffff;
+$card-footer-background-color-dark: #292624;
+$delete-background-color-dark: #c06034;
+$delete-color-dark: #f0f0f0;
+$delete-hover-background-color-dark: #d14229;
+$delete-hover-color-dark: #ffffff;
+
+$footer-background-color-dark: #1b1b1b;
+$footer-color-dark: #c0c0c0;
