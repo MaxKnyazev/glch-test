@@ -1,15 +1,14 @@
-import './Card.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCardByIdSuccess } from '../../store/cardsActionCreaters';
+import './Card.scss';
 
-const deleteButtonHandler = (id, dispatch, isInit) => {
+const deleteButtonHandler = (id, dispatch) => {
   dispatch(deleteCardByIdSuccess(id));
-  console.log(isInit);
 }
   
 const Card = ({card}) => {
   const dispatch = useDispatch();
-  const { isDark, isInit } = useSelector(state => state.cardsReducer);
+  const { isDark } = useSelector(state => state.cardsReducer);
  
   return (
     <li className={isDark ? 'card card--dark' : 'card card--light'}>
@@ -44,7 +43,11 @@ const Card = ({card}) => {
       </div>
 
       <div className={isDark ? 'card__footer card__footer--dark' : 'card__footer card__footer--light'}>
-        <button className={isDark ? 'card__delete card__delete--dark' : 'card__delete card__delete--light'} onClick={() => {deleteButtonHandler(card.id, dispatch, isInit)}}>Delete</button>
+        <button 
+          className={isDark ? 'card__delete card__delete--dark' : 'card__delete card__delete--light'} 
+          onClick={() => {deleteButtonHandler(card.id, dispatch)}}
+        >Delete
+        </button>
       </div>
     </li>
   )

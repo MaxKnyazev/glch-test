@@ -1,5 +1,5 @@
-import './Loader.scss';
 import { SpinnerDotted } from 'spinners-react';
+import './Loader.scss';
 
 const Loader = () => {
   return (

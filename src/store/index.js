@@ -4,7 +4,6 @@ import { cardsReducer } from './cardsReducer';
 
 const rootReducer = combineReducers({
   cardsReducer,
-
 })
 
 export const store = createStore(

@@ -18,7 +18,6 @@
 
   &__text {
     font-size: 20px;
-    
 
     &--light {
       color: $card-color-light;
@@ -75,19 +74,11 @@
     &--light {
       background-color: $card-background-color-light;
       color: $card-color-light;
-
-      &:focus {
-        background-color: $init-background-color-focus-light;
-      }
     }
   
     &--dark {
       background-color: $card-background-color-dark;
       color: $card-color-dark;
-
-      &:focus {
-        background-color: $init-background-color-focus-dark;
-      }
     }
   }
 }

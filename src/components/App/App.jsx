@@ -12,11 +12,9 @@ const App = () => {
   return (
     <div className='app'>
       <Header />
-
       {isInit && <Init />}
       {isLoading && <Loader />}
       {isInit || isLoading || <Main />}
-
       <Footer />
     </div>
   )
