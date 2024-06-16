@@ -1,1 +1,20 @@
 @import '../../variable';
+
+.main {
+  padding: 5rem 10rem;
+  flex: 1 1 auto;
+
+  &--light {
+    background-color: $main-background-color-light;
+  }
+
+  &--dark {
+    background-color: $main-background-color-dark;
+  }
+}
+
+@media (max-width: 850px) {
+  .main {
+    padding: 5rem 0;
+  }
+}

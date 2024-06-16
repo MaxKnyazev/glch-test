@@ -1,0 +1,93 @@
+@import '../../variable';
+
+.init {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &--light {
+    background-color: $main-background-color-light;
+  }
+
+  &--dark {
+    background-color: $main-background-color-dark;
+  }
+
+  &__text {
+    font-size: 20px;
+    
+
+    &--light {
+      color: $card-color-light;
+    }
+  
+    &--dark {
+      color: $card-color-dark;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+
+    &--light {
+      color: $delete-color-light;
+      background-color: $delete-background-color-light;
+
+      &:hover {
+        color: $delete-hover-color-light;
+        background-color: $delete-hover-background-color-light;
+      }
+    }
+  
+    &--dark {
+      color: $delete-color-dark;
+      background-color: $delete-background-color-dark;
+
+      &:hover {
+        color: $delete-hover-color-dark;
+        background-color: $delete-hover-background-color-dark;
+      }
+    }
+  }
+
+  &__input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    transition: all 200ms ease-in-out;
+    outline: none;
+
+    &--light {
+      background-color: $card-background-color-light;
+      color: $card-color-light;
+
+      &:focus {
+        background-color: $init-background-color-focus-light;
+      }
+    }
+  
+    &--dark {
+      background-color: $card-background-color-dark;
+      color: $card-color-dark;
+
+      &:focus {
+        background-color: $init-background-color-focus-dark;
+      }
+    }
+  }
+}

@@ -1,1 +1,51 @@
 @import '../../variable';
+
+.header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &--light {
+    background-color: $header-background-color-light;
+  }
+  
+  &--dark {
+    background-color: $header-background-color-dark;
+  }
+
+  &__title {
+    &--light {
+      color: $header-color-light;
+    }
+  
+    &--dark {
+      color: $header-color-dark;
+    }
+  }
+
+  &__svg {
+    width: 4vh;
+    height: 4vh;
+    cursor: pointer;
+    margin: 0 1vh;
+    transition: all 200ms ease-in-out;
+
+    &--light {
+      fill: $header-color-light;
+
+      &:hover {
+        fill: $header-color-hover-light;
+      }
+    }
+
+    &--dark {
+      fill: $header-color-dark;
+
+      &:hover {
+        fill: $header-color-hover-dark;
+      }
+    }
+  }
+}

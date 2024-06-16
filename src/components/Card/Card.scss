@@ -3,18 +3,40 @@
 .card {
   display: flex;
   justify-content: center;
-  // align-items: center;
   flex-direction: column;
   gap: 2rem;
   width: 30rem;
-  background-color: #d1d1d1;
+  border-radius: 20px;
+  
+  &--light {
+    background-color: $card-background-color-light;
+  }
+
+  &--dark {
+    background-color: $card-background-color-dark;
+  }
 
   &__header {
-    border-bottom: 1px solid #747474;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     padding: 1rem 0 1rem 0;
+    font-weight: 900;
+    font-size: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    &--light {
+      background-color: $card-header-background-color-light;
+      color: $card-header-color-light;
+    }
+  
+    &--dark {
+      background-color: $card-header-background-color-dark;
+      color: $card-header-color-dark;
+    }
+
   }
 
   &__main {
@@ -23,10 +45,14 @@
     flex-direction: column;
     padding-left: 1rem;
     gap: 0.5rem;
-  }
 
-  &__span {
-
+    &--light {
+      color: $card-color-light;
+    }
+  
+    &--dark {
+      color: $card-color-dark;
+    }
   }
 
   &__wrapper {
@@ -35,14 +61,50 @@
     flex-direction: column;
     gap: 0.5rem;
     margin-left: 1rem;
-    background-color: rgba($color: #000000, $alpha: 0.1);
   }
 
   &__footer {
-    border-top: 1px solid #747474;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem 0 1rem 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    &--light {
+      background-color: $card-footer-background-color-light;
+    }
+  
+    &--dark {
+      background-color: $card-footer-background-color-dark;
+    }
+  }
+
+  &__delete {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+
+    &--light {
+      color: $delete-color-light;
+      background-color: $delete-background-color-light;
+
+      &:hover {
+        color: $delete-hover-color-light;
+        background-color: $delete-hover-background-color-light;
+      }
+    }
+  
+    &--dark {
+      color: $delete-color-dark;
+      background-color: $delete-background-color-dark;
+
+      &:hover {
+        color: $delete-hover-color-dark;
+        background-color: $delete-hover-background-color-dark;
+      }
+    }
   }
 }
